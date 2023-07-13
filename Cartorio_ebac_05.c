@@ -116,7 +116,18 @@ int main()
 {
 	int opcao=0;  // = atribuido
 	int laco=1;
+	char senhadigitada[10]="a";
+	int comparacao;
 	
+	printf("\t### Cartório da EBAC ###\n\n");
+	printf("Login de Administrador!\n\nDigite a sua senha: ");
+	scanf("%s", senhadigitada);
+	
+	comparacao = strcmp(senhadigitada, "admin");
+	
+	if(comparacao == 0)
+	{
+		system ("cls");
 		for(laco=1;laco=1;)
 		{
 		
@@ -161,9 +172,12 @@ int main()
 					break;
 					// fim da seleção
 		
+			}
 		}
 	}
 	
-	printf("Esse software é de livre uso dos alunos\n");
+	else
+		printf("\nSenha incorreta!\n\n");
+		printf("Esse software é de livre uso dos alunos\n");
 	
 }
